@@ -2,7 +2,6 @@ import logo from './logo.svg';
 import './App.css';
 import searchIcon from './icons8-search-90.svg'
 import {useState, useEffect} from 'react'
-import e from 'cors';
 // import { url } from 'inspector';
 // import { url } from 'inspector';
 
