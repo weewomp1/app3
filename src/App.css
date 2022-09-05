@@ -7,6 +7,39 @@
   pointer-events: none;
 }
 
+body {
+  background-color: rgb(44, 41, 41);
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+input {
+  background-color: #474d57;
+  border: none;
+  outline: none;
+  font-size: 2em;
+  width: 40rem;
+  height: 4rem;
+  border-radius: 10rem;
+  text-align: center;
+}
+
+.search {
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+
+.search img {
+  cursor: pointer;
+  user-select: none;
+  transition: all .125s;
+  border-radius: 50%;
+}
+
+.search img:hover {
+  box-shadow: 0em 0em 1em 1em #474d57;
+}
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
@@ -34,5 +67,104 @@
   }
   to {
     transform: rotate(360deg);
+  }
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.title {
+  height: 19.8rem;
+  width: 14rem;
+  border-radius: 1rem;
+  background-color: greenyellow;
+  background-image: url('https://cdn.myanimelist.net/images/anime/1565/111305.jpg?s=a92272fe7a37f1c114011b406d5390c8');
+  transition: all .2s;
+  color: transparent;
+  display: flex;
+  overflow: hidden;
+  align-items: center;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.title h2 {
+  justify-self: flex-start;
+  font-size: 1em;
+  align-self: flex-start;
+}
+.title .synopsis {
+  font-size: 0.2em;
+  position: absolute;
+  margin-top: 8rem;
+}
+.title:hover {
+  transform: scale(1.1);
+  color:unset;
+  overflow: hidden;
+}
+
+.title .data {
+  display: flex;
+  justify-items: center;
+  margin-top: 12em;
+  justify-content:space-evenly;
+}
+
+.title .rating {
+  justify-self: flex-end;
+  align-self: flex-end;
+}
+.title ul li{
+  list-style: none;
+  display: inline;
+}
+.title .score {
+  justify-self: flex-end;
+  align-self: flex-end;
+  margin-left: 2em;
+}
+.title .type {
+  justify-self: flex-end;
+  align-self: flex-end;
+}
+
+.title .data {
+
+}
+.titles {
+  /* padding: 1rem; */
+  width: 80rem;
+  height: 45rem;
+  margin-top: 2em;
+  background-color: #373b45;
+  max-width: 100vw;
+  display:grid;
+  grid-template-columns: repeat(3, 1fr);
+  row-gap: 5rem;
+  justify-items: center;
+  padding: 2em 0em;
+  overflow-y: scroll;
+}
+
+.titles::-webkit-scrollbar {
+  display: none;
+}
+
+@media (max-width: 728px) {
+  .titles {
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
+  input {
+    height: 2rem;
+    width: 18rem;
+  }
+  .search {
+    margin-top: 4em;
+    flex-direction: column;
   }
 }
